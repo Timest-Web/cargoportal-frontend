@@ -1,14 +1,14 @@
+
 import type { Metadata } from "next"
-import { Inter, Geist } from "next/font/google"
+import { Geist } from "next/font/google"
 import "./globals.css"
-import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import Providers from "./providers"
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
 })
 
 export const metadata: Metadata = {
@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-     <TooltipProvider>
-        {children}
-      </TooltipProvider>
+        <Providers>
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
+        </Providers>
       </body>
     </html>
   )

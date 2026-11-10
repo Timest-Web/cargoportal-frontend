@@ -54,7 +54,7 @@ export default function CustomerSidebar() {
 
           <div className="h-10 w-10 rounded-2xl bg-emerald-500/15 ring-1 ring-emerald-500/25" />
           <div className="leading-tight group-data-[collapsible=icon]:hidden">
-            <div className="text-sm font-semibold tracking-tight">Atlas Cargo</div>
+            <div className="text-sm font-semibold tracking-tight">Cargo Portal</div>
             <div className="text-xs text-slate-300">Customer Portal</div>
           </div>
         </div>
