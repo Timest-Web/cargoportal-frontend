@@ -21,6 +21,10 @@ const map: Record<string, string> = {
   Rejected: "bg-destructive/10 text-destructive",
   Suspended: "bg-destructive/10 text-destructive",
   Paid: "bg-primary/10 text-primary",
+  Overdue: "bg-destructive/10 text-destructive",
+  "Part paid": "bg-info/10 text-info",
+  Active: "bg-primary/10 text-primary",
+  Inactive: "bg-muted text-muted-foreground",
   Unpaid: "bg-warning/15 text-warning-foreground",
 };
 
