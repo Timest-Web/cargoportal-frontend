@@ -1,33 +1,27 @@
 
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
 import "./globals.css"
-import { cn } from "@/lib/utils"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import Providers from "./providers"
+import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import "./globals.css";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["700", "800"], variable: "--font-d" });
+const body = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-b" });
 
 export const metadata: Metadata = {
-  title: "Cargo Portal",
-  description: "Cargo Portal Management System",
-}
+  title: "Cargo Portal – Cargo software for UK, USA and China to Nigeria freight",
+  description: "Manage shipments, warehouses, agents, invoices and customer tracking in one portal.",
+};
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-        <Providers>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
+       <Providers>
           <TooltipProvider>
             {children}
           </TooltipProvider>
         </Providers>
-      </body>
     </html>
-  )
+  );
 }
