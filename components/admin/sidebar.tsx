@@ -82,7 +82,6 @@ export function AdminSidebar() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-sidebar-primary opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-sidebar-primary" />
             </span>
-            All systems operational
           </div>
         </SidebarFooter>
       </div>
